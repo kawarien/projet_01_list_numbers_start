@@ -1,6 +1,6 @@
 import parser from './core/utils';
 
-
+///////////////////////  Exercice 01 liste de nombres //////////////////
 
 
 let els = document.querySelectorAll('ul.numbers > li');
@@ -18,7 +18,9 @@ console.log(els)
 // const ul = document.querySelector('ul.numbers');
 
 // [l3, l1, l2].map(lesLi   => {
+
 //   console.log(' --  Apres la permutation --- ', lesLi);
+
 //   ul.appendChild(l1);
 // }
 // )
@@ -28,24 +30,24 @@ console.log(els)
 
 // Boucles JS
 
-function perm(xs) {
-  let mysNewTab = [];
-  for (let i = 0; i < xs.length; i = i + 1) {
-    let rest = perm(xs.slice(0, i).concat(xs.slice(i + 1)));
+// function perm(xs) {
+//   let mysNewTab = [];
+//   for (let i = 0; i < xs.length; i = i + 1) {
+//     let rest = perm(xs.slice(0, i).concat(xs.slice(i + 1)));
 
-    if(!rest.length) {
-      mysNewTab.push([xs[i]])
-    } else {
-      for(let j = 0; j < rest.length; j = j + 1) {
-        mysNewTab.push([xs[i]].concat(rest[j]))
-      }
-    }
-  }
-  return mysNewTab;
-}
- let myTab = Array.from(document.querySelectorAll('li'))
- console.log(myTab)
-console.log(perm(myTab).join("\n"));
+//     if(!rest.length) {
+//       mysNewTab.push([xs[i]])
+//     } else {
+//       for(let j = 0; j < rest.length; j = j + 1) {
+//         mysNewTab.push([xs[i]].concat(rest[j]))
+//       }
+//     }
+//   }
+//   return mysNewTab;
+// }
+//  let myTab = Array.from(document.querySelectorAll('li'))
+//  console.log(myTab)
+// console.log(perm(myTab).join("\n"));
 
 //  let myTab = Array.from(document.querySelectorAll('li'))
 // for(let i = 0; i < myTab.length; i++){
@@ -61,9 +63,13 @@ console.log(perm(myTab).join("\n"));
 // console.log("avec map ",text) 
 
 
-// On attend que le DOM soit construit avant d'exécuter nos fonctions
-document.addEventListener("DOMContentLoaded", (event) => {
 
 
+///////////////////////  Exercice 02 Créer un élément HTML //////////////////
 
-});
+let container = document.getElementById('ul');
+let li = document.createElement('li');
+li.innerHTML = "D 1"
+container.appendChild(li);
+
+
