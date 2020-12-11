@@ -67,9 +67,29 @@ console.log(els)
 
 ///////////////////////  Exercice 02 Créer un élément HTML //////////////////
 
-let container = document.getElementById('ul');
-let li = document.createElement('li');
-li.innerHTML = "D 1"
-container.appendChild(li);
 
 
+window.onload = () => {
+    
+    let container = document.querySelector('ul.numbers');
+    let li = null;
+
+    let  text = Array.from(document.querySelectorAll('ul.numbers > li'))
+      .map(el => {
+          return el
+      });
+    console.log("avec map ",text) 
+
+    for (let index = 4; index < 9; index++) {
+        li = document.createElement("li");
+        const str = "DEFGH";
+        for (let i = 0; i < 5; i++) {
+            li.innerHTML = str.charAt(str[i]) + "="+ index;
+            container.appendChild(li)   
+            
+        }
+          
+        
+}
+   
+}
